@@ -1,0 +1,150 @@
+.header__container {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.background::after {
+     content: '';
+     background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(3px);
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+     width: 100%;
+     height: 100vh;
+    cursor: pointer;
+ }
+
+.link__style {
+    position: absolute;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Montserrat";
+;
+}
+
+.cart__outer {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart__img {
+
+}
+
+.cart__img:hover {
+    animation: shake .3s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%  {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.button__arrow {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+
+.button__arrow--active {
+    transform: rotate(180deg) ;
+}
+
+
+.arrow__img {
+
+}
+
+.arrow__img:hover {
+    animation: jump 1s ease-in-out infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.badge__outer {
+    position: absolute;
+    font-family: "Roboto Monserrat";
+    top: 15px;
+    right: 65px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #301346;
+    color: #ffffff;
+    font-size: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.non__badge {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background: none;
+    border: none;
+}
+.color {
+    background: #bf589c;
+}
+
+@media (min-width: 1024px) {
+    .link__style {
+        margin: 57px;
+    }
+    .cart__outer {
+        margin: 125px;
+    }
+    .badge__outer {
+        right: 170px;
+        top: 13px;
+    }
+}

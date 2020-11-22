@@ -1,0 +1,123 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #1C042E;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__image {
+    width: 80%;
+}
+
+.name {
+    font-family: "Roboto";
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.price {
+    color: #fff;
+    font-weight: 700;
+}
+.image__outer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    font-family: "Roboto";
+    color: #fff;
+    width: 80%;
+    font-weight: 400;
+}
+
+.button__style {
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    background-color: #bf589c;
+    outline: none;
+    transition: transform .2s ease-out;
+}
+
+.description__outer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__style:hover {
+    transform: scale(1.1);
+    -webkit-appearance: none;
+    box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+    -moz-box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+    -webkit-box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+}
+
+.button__style:active {
+    animation: bounce .5s ease-out;
+}
+
+@keyframes bounce {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.tag__paragraph {
+    color: #FBE067;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .name {
+        font-size: 37.5px;
+    }
+    .price {
+        font-size: 22px;
+    }
+    .description {
+        font-size: 22px;
+    }
+    .description__outer {
+        display: block;
+        width: 50%;
+    }
+    .product__image {
+        width: 400px;
+    }
+    .image__outer {
+        width: 50%;
+    }
+}

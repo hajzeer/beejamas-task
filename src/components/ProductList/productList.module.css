@@ -1,0 +1,113 @@
+.container {
+    width: 300px;
+    height: 380px;
+    margin: 20px;
+    border-radius: 2px;
+    border: 4px solid #F1F1F1;
+    background: rgba(255, 255, 255, .1);
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+
+    transition: transform .2s ease-out;
+}
+
+.container:hover {
+    transform: scale(1.1);
+
+    box-shadow: 0 9px 50px 0 rgba(255, 255, 255, .3);
+    -moz-box-shadow: 0 9px 50px 0 rgba(255, 255, 255, .3);
+    -webkit-box-shadow: 0 9px 50px 0 rgba(255, 255, 255, .3);
+}
+
+.container__inner {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__button {
+    border: none;
+    background: transparent;
+}
+
+.product__img {
+    width: 40%;
+    margin: 20px;
+
+}
+
+.name {
+    align-self: flex-start;
+    font-family: Arial;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+}
+
+
+.description {
+    align-self: flex-start;
+    margin: 10px;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 14px;
+    width: 70%;
+}
+
+.addCart__button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    right: 0;
+    bottom: 0;
+
+    background: #bf589c;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+
+    font-weight: 900;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+
+    transition: transform .2s ease-out;
+}
+
+.addCart__button:hover {
+    z-index: 1;
+    transform: scale(1.1);
+    -webkit-appearance: none;
+    box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+    -moz-box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+    -webkit-box-shadow: 0 9px 50px 0 rgba(191, 88, 156, .7);
+}
+
+.addCart__button:active {
+    animation: bounce .3s ease-out;
+}
+
+@keyframes bounce {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin: 10px;
+    }
+}
+
